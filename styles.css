@@ -435,12 +435,14 @@ input, select, textarea { font: inherit; color: inherit; }
 
 /* Brand tile */
 .brand-tile {
+  display: block;
   position: relative;
   aspect-ratio: 1 / 1;
   background: var(--surface-elevated);
   border: var(--border-width) solid var(--border-subtle);
   border-radius: var(--radius-md);
   overflow: hidden;
+  text-decoration: none;
   transition: border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
 }
 
