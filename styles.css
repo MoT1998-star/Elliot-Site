@@ -473,6 +473,12 @@ input, select, textarea { font: inherit; color: inherit; }
   object-fit: cover;
   border: var(--border-width) solid var(--border-subtle);
   border-radius: var(--radius-md);
+  transition: border-color var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out);
+}
+
+a:hover > .contact-map-img {
+  border-color: var(--accent);
+  opacity: 0.9;
 }
 
 /* Brand tile */
