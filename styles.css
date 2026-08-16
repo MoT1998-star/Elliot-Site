@@ -586,6 +586,9 @@ a:hover > .contact-map-img {
   text-transform: uppercase;
 }
 
+.section-inverse .pull-quote blockquote { color: var(--text-on-inverse); }
+.section-inverse .pull-quote cite { color: var(--stone-300); }
+
 /* --------------------------------------------------------------------------
    Timeline (About)
    -------------------------------------------------------------------------- */
