@@ -441,6 +441,13 @@ input, select, textarea { font: inherit; color: inherit; }
   box-shadow: var(--shadow-md);
 }
 
+.person-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
 /* Brand tile */
 .brand-tile {
   display: block;
