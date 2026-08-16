@@ -466,6 +466,15 @@ input, select, textarea { font: inherit; color: inherit; }
   object-fit: cover;
 }
 
+.contact-map-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
 /* Brand tile */
 .brand-tile {
   display: block;
