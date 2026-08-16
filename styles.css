@@ -435,33 +435,29 @@ input, select, textarea { font: inherit; color: inherit; }
 
 /* Brand tile */
 .brand-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
   background: var(--surface-elevated);
   border: var(--border-width) solid var(--border-subtle);
   border-radius: var(--radius-md);
-  padding: var(--space-6) var(--space-4) var(--space-4);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-4);
-  text-align: center;
-  min-height: 148px;
+  overflow: hidden;
   transition: border-color var(--duration-base) var(--ease-out), box-shadow var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
 }
 
 .brand-tile:hover {
   border-color: var(--accent);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   transform: translateY(-2px);
 }
 
 .brand-tile img {
-  display: block;
-  max-width: 100%;
-  height: 44px;
-  width: auto;
-  object-fit: contain;
-  filter: grayscale(1) opacity(0.72);
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) opacity(0.88);
   transition: filter var(--duration-base) var(--ease-out);
 }
 
@@ -469,9 +465,23 @@ input, select, textarea { font: inherit; color: inherit; }
   filter: grayscale(0) opacity(1);
 }
 
+.brand-tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(19, 17, 14, 0.82) 0%, rgba(19, 17, 14, 0.28) 42%, rgba(19, 17, 14, 0) 68%);
+  pointer-events: none;
+}
+
 .brand-tile span {
-  font: 400 0.9375rem/1.2 var(--font-display);
-  color: var(--text-primary);
+  position: absolute;
+  z-index: 2;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: var(--space-3);
+  font: 400 1rem/1.25 var(--font-display);
+  color: var(--text-on-inverse);
 }
 
 .brand-tile small {
