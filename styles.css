@@ -476,6 +476,18 @@ input, select, textarea { font: inherit; color: inherit; }
   transition: border-color var(--duration-base) var(--ease-out), opacity var(--duration-base) var(--ease-out);
 }
 
+.section-photo-wide,
+.section-photo-tall {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border: var(--border-width) solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.section-photo-wide { aspect-ratio: 16 / 9; }
+.section-photo-tall { aspect-ratio: 3 / 4; }
+
 a:hover > .contact-map-img {
   border-color: var(--accent);
   opacity: 0.9;
