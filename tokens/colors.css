@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Amalfi Hardware — Color tokens
+   Warm, low-saturation stone/ivory neutral scale (materials palette, not a
+   "brand blue" palette) built in OKLCh so the ramp stays perceptually even.
+   One accent — aged bronze — stands in for the brass/bronze finishes Amalfi
+   sells. Used sparingly: links, small CTAs, focus rings, active states.
+   ========================================================================== */
+
+:root {
+  /* Stone / ivory neutral scale */
+  --stone-50:  oklch(98.5% 0.004 80);
+  --stone-100: oklch(96.5% 0.006 78);
+  --stone-200: oklch(92%   0.008 76);
+  --stone-300: oklch(86%   0.010 75);
+  --stone-400: oklch(74%   0.012 74);
+  --stone-500: oklch(60%   0.014 72);
+  --stone-600: oklch(48%   0.014 70);
+  --stone-700: oklch(37%   0.012 68);
+  --stone-800: oklch(27%   0.010 66);
+  --stone-900: oklch(19%   0.008 64);
+  --stone-950: oklch(13%   0.006 60);
+
+  /* Aged bronze accent scale */
+  --bronze-100: oklch(87% 0.035 68);
+  --bronze-200: oklch(79% 0.050 63);
+  --bronze-300: oklch(71% 0.065 58);
+  --bronze-400: oklch(63% 0.080 53);
+  --bronze-500: oklch(55% 0.088 49);
+  --bronze-600: oklch(47% 0.082 47);
+  --bronze-700: oklch(39% 0.070 45);
+  --bronze-800: oklch(30% 0.056 43);
+
+  /* Semantic surfaces */
+  --surface-page: var(--stone-50);
+  --surface-elevated: #ffffff;
+  --surface-sunken: var(--stone-100);
+  --surface-inverse: var(--stone-900);
+
+  /* Semantic text */
+  --text-primary: var(--stone-900);
+  --text-secondary: var(--stone-600);
+  --text-muted: var(--stone-500);
+  --text-on-inverse: var(--stone-50);
+
+  /* Borders */
+  --border-subtle: var(--stone-200);
+  --border-strong: var(--stone-400);
+
+  /* Accent */
+  --accent: var(--bronze-600);
+  --accent-hover: var(--bronze-700);
+  --accent-press: var(--bronze-800);
+  --accent-soft: var(--bronze-100);
+
+  /* Functional-only semantic colors — desaturated, form validation only */
+  --success: oklch(52% 0.045 150);
+  --danger: oklch(48% 0.06 25);
+}

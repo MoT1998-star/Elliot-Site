@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brands — Amalfi Hardware</title>
+<meta name="description" content="A curated wall of 100+ manufacturer brands, plus our house DaVinci Collection. Browse the full Amalfi Hardware brand directory.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="wordmark">Amalfi Hardware</a>
+    <nav class="site-nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="design.html">Design</a>
+      <a href="brands.html" aria-current="page">Brands</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Schedule a call +</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container" data-reveal>
+      <span class="eyebrow">Brands</span>
+      <h1 class="display-lg">A curated wall of 100+ manufacturers.</h1>
+      <p class="body-lg">We are a multi-brand distributor, not a single-line shop. Every faucet, fixture, and fitting we carry is chosen for the room it belongs in — plus one house collection, made under our own name.</p>
+    </div>
+  </section>
+
+  <!-- House collection -->
+  <section class="section section-tight">
+    <div class="container" data-reveal>
+      <div class="card card-shadow" style="display: grid; grid-template-columns: 1fr 1fr; overflow: hidden;">
+        <div class="ph-photo ph-full" style="min-height: 320px;" data-label="DaVinci Collection, brass fittings"></div>
+        <div class="card-body" style="display: flex; flex-direction: column; justify-content: center; padding: var(--space-12);">
+          <span class="eyebrow">House collection</span>
+          <h2 class="display-md" style="margin-block: var(--space-4) var(--space-4);">The DaVinci Collection.</h2>
+          <p class="body-lg" style="margin-bottom: var(--space-6);">Our own line, made where nothing on the wall was quite right. Bespoke fittings, developed in-house and made to order.</p>
+          <a href="contact.html" class="cta-link">Enquire about DaVinci +</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Directory -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container" data-reveal>
+
+      <div class="filter-bar">
+        <div class="filter-chips" role="group" aria-label="Filter brands by category">
+          <button class="chip" data-filter="all" aria-pressed="true">All brands</button>
+          <button class="chip" data-filter="faucets" aria-pressed="false">Faucets</button>
+          <button class="chip" data-filter="fixtures" aria-pressed="false">Fixtures</button>
+          <button class="chip" data-filter="bath" aria-pressed="false">Bath</button>
+          <button class="chip" data-filter="architectural" aria-pressed="false">Architectural</button>
+        </div>
+        <div class="sort-control">
+          <i data-lucide="arrow-up-down" style="width: 16px; height: 16px;"></i>
+          <label for="brand-sort">Sort</label>
+          <select id="brand-sort">
+            <option>A–Z</option>
+            <option>Featured</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="brand-tile" data-category="faucets"><span>Dornbracht</span></div>
+        <div class="brand-tile" data-category="faucets"><span>Grohe</span></div>
+        <div class="brand-tile" data-category="fixtures"><span>Kohler</span></div>
+        <div class="brand-tile" data-category="faucets"><span>Rohl</span></div>
+        <div class="brand-tile" data-category="fixtures"><span>Toto</span></div>
+        <div class="brand-tile" data-category="bath"><span>Duravit</span></div>
+        <div class="brand-tile" data-category="faucets"><span>Perrin &amp; Rowe</span></div>
+        <div class="brand-tile" data-category="faucets"><span>Graff</span></div>
+        <div class="brand-tile" data-category="bath"><span>Waterworks</span></div>
+        <div class="brand-tile" data-category="architectural"><span>THG Paris</span></div>
+        <div class="brand-tile" data-category="faucets"><span>Newport Brass</span></div>
+        <div class="brand-tile" data-category="faucets"><span>California Faucets</span></div>
+        <div class="brand-tile" data-category="faucets"><span>Brizo</span></div>
+        <div class="brand-tile" data-category="fixtures"><span>Hansgrohe</span></div>
+        <div class="brand-tile" data-category="architectural"><span>Zucchetti</span></div>
+        <div class="brand-tile" data-category="architectural"><span>Gessi</span></div>
+      </div>
+
+      <p class="body-sm" style="margin-top: var(--space-10); text-align: center;">Not seeing a brand you work with? <a href="contact.html" class="cta-link" style="display: inline;">Ask our showroom +</a></p>
+    </div>
+  </section>
+
+  <section class="section section-inverse" style="text-align: center;">
+    <div class="container" data-reveal>
+      <span class="eyebrow">Showroom by appointment</span>
+      <h2 class="display-lg" style="margin-block: var(--space-4) var(--space-8);">See the finishes in person.</h2>
+      <a href="contact.html" class="btn btn-primary">Schedule a call +</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="wordmark">Amalfi Hardware</span>
+      <p>Distributors of fine faucets and fixtures. Family-owned across four generations.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Showroom</h4>
+      <ul>
+        <li><p>212 Flatiron Row</p></li>
+        <li><p>New York, NY 10010</p></li>
+        <li><p>By appointment</p></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+12125550142">+1 (212) 555-0142</a></li>
+        <li><a href="mailto:showroom@amalfihardware.com">showroom@amalfihardware.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom container">
+    <span>© 2026 Amalfi Hardware. All rights reserved.</span>
+    <span>Distributors of fine faucets and fixtures.</span>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="script.js"></script>
+</body>
+</html>

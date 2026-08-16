@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Amalfi Hardware — Typography tokens
+   Two families only. Spectral (serif) carries display/heading roles.
+   Work Sans (sans) carries all UI and body copy.
+   No font files were provided anywhere in this project, so both families
+   are loaded from Google Fonts CDN as a flagged substitution — same
+   treatment as the Lucide icon substitution in the design system doc.
+   Replace with licensed font files in the head of each page if real
+   brand type assets become available.
+   ========================================================================== */
+
+:root {
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-body: 'Work Sans', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* Display / heading scale — Spectral, light/regular weights */
+  --text-display-xl: 400 clamp(2.75rem, 2.1rem + 2.6vw, 4.5rem) / 1.08 var(--font-display);
+  --text-display-lg: 400 clamp(2.25rem, 1.8rem + 1.8vw, 3.25rem) / 1.12 var(--font-display);
+  --text-display-md: 400 clamp(1.75rem, 1.5rem + 1vw, 2.25rem) / 1.18 var(--font-display);
+  --text-display-sm: 400 1.5rem/1.25 var(--font-display);
+  --text-display-italic: 300 italic clamp(1.5rem, 1.3rem + 0.8vw, 2rem) / 1.4 var(--font-display);
+
+  /* Body / UI scale — Work Sans */
+  --text-body-lg: 400 1.125rem/1.6 var(--font-body);
+  --text-body-md: 400 1rem/1.65 var(--font-body);
+  --text-body-sm: 400 0.875rem/1.6 var(--font-body);
+  --text-label: 500 0.8125rem/1.4 var(--font-body);
+  --text-eyebrow: 600 0.75rem/1.3 var(--font-body);
+
+  --tracking-wide: 0.06em;
+  --tracking-wider: 0.12em;
+}
