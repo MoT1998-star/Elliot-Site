@@ -77,10 +77,17 @@ input, select, textarea { font: inherit; color: inherit; }
 }
 
 .wordmark {
-  font: 400 1.375rem/1 var(--font-display);
-  letter-spacing: var(--tracking-wide);
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
 }
+
+.wordmark img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.footer-brand .wordmark img { filter: invert(1); }
 
 /* Trade-style CTA: verb-first, small caps, trailing "+" set in body font */
 .cta-link {
@@ -252,7 +259,6 @@ input, select, textarea { font: inherit; color: inherit; }
   max-width: 32ch;
 }
 
-.footer-brand .wordmark { color: var(--text-on-inverse); }
 
 .footer-col h4 {
   font: var(--text-eyebrow);
