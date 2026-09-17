@@ -657,20 +657,34 @@ a:hover > .contact-map-img {
 
 .chip:hover:not([aria-pressed="true"]) { border-color: var(--accent); color: var(--accent); }
 
-.sort-control {
+.search-control {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
   font: var(--text-body-sm);
-  color: var(--text-secondary);
-}
-
-.sort-control select {
+  color: var(--text-muted);
   border: var(--border-width) solid var(--border-subtle);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
   background: var(--surface-elevated);
+  min-width: 240px;
+  transition: border-color var(--duration-base) var(--ease-out);
 }
+
+.search-control:focus-within { border-color: var(--accent); }
+
+.search-control input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: var(--text-body-sm);
+  color: var(--text-primary);
+}
+
+.search-control input::placeholder { color: var(--text-muted); }
+
+.search-control input[type="search"]::-webkit-search-cancel-button { cursor: pointer; }
 
 /* --------------------------------------------------------------------------
    Forms

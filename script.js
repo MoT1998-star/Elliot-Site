@@ -30,18 +30,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const chips = document.querySelectorAll('.chip[data-filter]');
   const tiles = document.querySelectorAll('[data-category]');
-  if (chips.length && tiles.length) {
+  const searchInput = document.querySelector('#brand-search');
+  if (tiles.length) {
+    let activeFilter = 'all';
+    let searchQuery = '';
+
+    const applyFilters = () => {
+      tiles.forEach((tile) => {
+        const categoryMatch = activeFilter === 'all' || tile.getAttribute('data-category') === activeFilter;
+        const nameEl = tile.querySelector('span');
+        const name = nameEl ? nameEl.textContent.toLowerCase() : '';
+        const searchMatch = !searchQuery || name.includes(searchQuery);
+        tile.style.display = (categoryMatch && searchMatch) ? '' : 'none';
+      });
+    };
+
     chips.forEach((chip) => {
       chip.addEventListener('click', () => {
         chips.forEach((c) => c.setAttribute('aria-pressed', 'false'));
         chip.setAttribute('aria-pressed', 'true');
-        const filter = chip.getAttribute('data-filter');
-        tiles.forEach((tile) => {
-          const match = filter === 'all' || tile.getAttribute('data-category') === filter;
-          tile.style.display = match ? '' : 'none';
-        });
+        activeFilter = chip.getAttribute('data-filter');
+        applyFilters();
       });
     });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        searchQuery = searchInput.value.trim().toLowerCase();
+        applyFilters();
+      });
+    }
   }
 
   const form = document.querySelector('.appointment-form');
