@@ -335,6 +335,10 @@ input, select, textarea { font: inherit; color: inherit; }
   color: var(--text-on-inverse);
 }
 .section-inverse .body-md, .section-inverse .body-lg { color: var(--stone-300); }
+.section-inverse .display-xl,
+.section-inverse .display-lg,
+.section-inverse .display-md,
+.section-inverse .display-sm { color: var(--text-on-inverse); }
 
 .grid { display: grid; gap: var(--space-8); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
